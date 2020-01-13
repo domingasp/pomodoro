@@ -22,9 +22,11 @@
             </div>
 
             <div>
-                <button>Start</button>
-                <button>Stop</button>
-                <span>Pomodoro 1: 25:00</span>
+                <button onclick="startPomodoro(this)">Start</button>
+                <button onclick="stopPomodoro(this)" disabled>Stop</button>
+                <button onclick="pausePomodoro(this)" disabled>Pause</button>
+                <span id="pomodoroCountdownLabelID">Pomodoro 1:</span>
+                <span id="pomodoroCountdownID">25:00</span>
             </div>
         </div>
 
