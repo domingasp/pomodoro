@@ -49,3 +49,70 @@ table {
 	font-family: "AlfaSlabOne";
 	src: url(AlfaSlabOne-Regular.ttf);
 }
+
+.main-body-div {
+	max-width: 75rem;
+	margin: 0 auto;
+}
+
+.strap-bar-div {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+
+	padding: 0.25rem 1rem;
+}
+
+.strap-bar-img {
+	width: 4rem;
+	max-width: 4rem;
+}
+
+.strap-bar-span {
+	font-family: "AlfaSlabOne";
+	font-size: 1.5rem;
+
+	margin-left: 0.5rem;
+}
+
+.strap-bar-btn {
+	border: none;
+	outline: none;
+
+	background-color: #C4A381;
+	color: #000000;
+
+	font-size: 0.8rem;
+
+	border-radius: 0.125rem;
+
+	padding: 0.5rem 1rem;
+	margin-left: auto;
+
+	transition: all 0.2s;
+	cursor: pointer;
+}
+
+.strap-bar-btn:hover, .strap-bar-btn:focus {
+	background-color: #D4BCA3;
+	box-shadow: 0 0 0 0.25rem #3C87BC;
+}
+
+.strap-bar-btn__icon::after {
+	content: ' ';
+	white-space: pre;
+}
+
+@media only screen and (max-width: 340px) {
+	.strap-bar-div {
+		justify-content: center;
+	}
+
+	.strap-bar-div > * {
+		flex: 1 100%;
+	}
+
+	.strap-bar-span {
+		padding: 0.5rem 0;
+	}
+}
