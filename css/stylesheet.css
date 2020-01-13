@@ -44,3 +44,8 @@ table {
 }
 
 /* ############## END OF RESET ############## */
+
+@font-face {
+	font-family: "AlfaSlabOne";
+	src: url(AlfaSlabOne-Regular.ttf);
+}
