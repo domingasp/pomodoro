@@ -2,6 +2,8 @@
 var countdownLabel = document.getElementById("pomodoroCountdownLabelID");
 var countdownDisplay = document.getElementById("pomodoroCountdownID");
 
+var audio = new Audio("./assets/timer_sfx.mp3");
+
 // Variabes to keep track of the state of the timer
 var pomodoroPeriod = true;
 var pomodoroNumber = 1;
@@ -53,12 +55,14 @@ function startPomodoro(startButton) {
                 timer.minute = 20;
                 timer.second = 0;
 
+                audio.play();
                 pomodoroPeriod = false;
             // If 4 pomodoros have not passed then rest time is only 5 minutes
             } else if (timer.minute == 0 && timer.second == 0) {
                 timer.minute = 5;
                 timer.second = 0;
 
+                audio.play();
                 pomodoroPeriod = false;
             }
         } else {
@@ -68,6 +72,7 @@ function startPomodoro(startButton) {
                 timer.minute = 25;
                 timer.second = 0;
 
+                audio.play();
                 pomodoroPeriod = true;
                 pomodoroNumber += 1;
             }
