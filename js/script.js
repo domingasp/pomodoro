@@ -18,6 +18,7 @@ function startPomodoro(startButton) {
     // Prevents multiple intervals being created by disabling the start button
     startButton.disabled = true;
     startButton.nextElementSibling.disabled = false;
+    startButton.nextElementSibling.focus();
     startButton.nextElementSibling.nextElementSibling.disabled = false;
 
     // Creates an interval which runs every 1 second.
@@ -81,6 +82,7 @@ function stopPomodoro(stopButton) {
     stopButton.disabled = true;
     stopButton.nextElementSibling.disabled = true;
     stopButton.previousElementSibling.disabled = false;
+    stopButton.previousElementSibling.focus();
 
     // Clear the 1 second interval
     clearInterval(interval);
@@ -99,6 +101,7 @@ function pausePomodoro(pauseButton) {
     pauseButton.disabled = true;
     pauseButton.previousElementSibling.disabled = false;
     pauseButton.previousElementSibling.previousElementSibling.disabled = false;
+    pauseButton.previousElementSibling.previousElementSibling.focus();
 
     // Clear the 1 second interval
     clearInterval(interval);

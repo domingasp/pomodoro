@@ -82,7 +82,7 @@ table {
 	background-color: #C4A381;
 	color: #000000;
 
-	font-size: 0.8rem;
+	font-size: 1rem;
 
 	border-radius: 0.125rem;
 
@@ -103,7 +103,77 @@ table {
 	white-space: pre;
 }
 
-@media only screen and (max-width: 340px) {
+.controls-container {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: center;
+
+	padding: 0 0.5rem;
+	margin-top: 1rem;
+}
+
+.default-btn {
+	border: none;
+	outline: none;
+
+	background-color: #C4A381;
+	color: #000000;
+
+	font-size: 1.5rem;
+
+	border-radius: 0.125rem;
+
+	padding: 0.5rem 1rem;
+
+	margin: 0 0.5rem;
+
+	transition: all 0.2s;
+	cursor: pointer;
+}
+
+.default-btn:hover:not(:disabled), .default-btn:focus:not(:disabled) {
+	box-shadow: 0 0 0 0.25rem #3C87BC;
+}
+
+.default-btn:disabled {
+	color: #888888;
+	cursor: initial;
+}
+
+.start-btn {
+	background-color: #B5C45A;
+}
+
+.start-btn:hover, .start-btn:focus {
+	background-color: #C9D487;
+}
+
+.start-btn:disabled {
+	background-color: #E4E9C3;
+}
+
+.stop-btn {
+	background-color: #F86428;
+}
+
+.stop-btn:hover, .stop-btn:focus {
+	background-color: #FBAA89;
+}
+
+.stop-btn:disabled {
+	background-color: #FDE2D7;
+}
+
+.pause-btn:hover, .pause-btn:focus {
+	background-color: #D4BCA3;
+}
+
+.pause-btn:disabled {
+	background-color: #E9DDD1;
+}
+
+@media only screen and (max-width: 440px) {
 	.strap-bar-div {
 		justify-content: center;
 	}
@@ -115,4 +185,13 @@ table {
 	.strap-bar-span {
 		padding: 0.5rem 0;
 	}
+
+	.default-btn {
+		flex: 1 100%;
+		margin-bottom: 0.5rem;
+	}
+
+	/* .start-btn, .stop-btn {
+		margin-bottom: 0.5rem;
+	} */
 }

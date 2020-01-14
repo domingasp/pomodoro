@@ -18,13 +18,15 @@
             <div class="strap-bar-div">
                 <img class="strap-bar-img"src="./assets/pomodoro.png" alt="Drawing of a tomato">
                 <span class="strap-bar-span">Pomodoro</span>
-                <button class="strap-bar-btn"><i class="strap-bar-btn__icon fas fa-info-circle"></i>About</button>
+                <button class="strap-bar-btn"><i class="fas fa-info-circle strap-bar-btn__icon"></i>About</button>
             </div>
 
             <div>
-                <button onclick="startPomodoro(this)">Start</button>
-                <button onclick="stopPomodoro(this)" disabled>Stop</button>
-                <button onclick="pausePomodoro(this)" disabled>Pause</button>
+                <div class="controls-container">
+                    <button class="default-btn start-btn" onclick="startPomodoro(this)"><i class="fas fa-play strap-bar-btn__icon"></i>Start</button>
+                    <button class="default-btn stop-btn" onclick="stopPomodoro(this)" disabled><i class="fas fa-stop strap-bar-btn__icon"></i>Stop</button>
+                    <button class="default-btn pause-btn" onclick="pausePomodoro(this)" disabled><i class="fas fa-pause strap-bar-btn__icon"></i>Pause</button>
+                </div>
                 <span id="pomodoroCountdownLabelID">Pomodoro 1:</span>
                 <span id="pomodoroCountdownID">25:00</span>
             </div>
