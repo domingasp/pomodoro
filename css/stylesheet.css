@@ -192,6 +192,100 @@ table {
 	margin-top: 1.5rem;
 }
 
+.modal-background-div {
+	display: none;
+	position: fixed;
+	background-color: #00000055;
+
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.modal-div {
+	position: absolute;
+	display: none;
+	width: 100%;
+	max-width: 35rem;
+	top: -100rem;
+	left: 50%;
+	transform: translateX(-50%);
+
+	font-size: 1rem;
+	line-height: 1.25rem;
+
+	background-color: #ffffff;
+	color: #000000;
+
+	box-sizing: border-box;
+	padding: 1rem;
+	border-radius: 0.0625rem;
+}
+
+.modal-close-btn {
+	outline: none;
+	border: none;
+	padding: 0;
+
+	width: 2rem;
+	height: 2rem;
+
+	background-color: transparent;
+	color: #bbbbbb;
+	float: right;
+
+	box-sizing: border-box;
+	border-radius: 100%;
+	line-height: 2rem;
+	font-size: 0.9rem;
+
+	cursor: pointer;
+
+	transition: all 0.2s ease-out;
+}
+
+.modal-close-btn:hover, .modal-close-btn:focus {
+	color: #000000;
+	box-shadow: 0 0 0 0.25rem #F86428;
+}
+
+.modal-title {
+	display: block;
+	margin-top: 1.25rem;
+	margin-bottom: 0.5rem;
+
+	box-sizing: border-box;
+	padding: 0.25rem;
+
+	border-bottom: solid 0.25rem #B5C45A;
+
+	font-size: 1.5rem;
+	line-height: 1.5rem;
+}
+
+.modal-img {
+	border: none;
+	outline: none;
+
+	display: block;
+	width: 60%;
+	max-width: 15rem;
+
+	margin-bottom: 1rem;
+	margin-left: auto;
+	margin-right: auto;
+
+	pointer-events: none;
+}
+
+.modal-p {
+	display: block;
+
+	box-sizing: border-box;
+	padding: 0.25rem 0.5rem;
+}
+
 @media only screen and (max-width: 440px) {
 	.strap-bar-div {
 		justify-content: center;
@@ -209,4 +303,14 @@ table {
 		flex: 1 100%;
 		margin-bottom: 0.5rem;
 	}
+}
+
+@keyframes slideDown {
+	0% { top: -200rem; }
+	100% { top: 0; }
+}
+
+@keyframes slideUp {
+	0% { top: 0; }
+	100% { top: -150rem; }
 }

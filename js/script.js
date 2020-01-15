@@ -1,3 +1,8 @@
+// Buttons
+var buttons = [document.getElementById("aboutButtonID"), document.getElementById("startButtonID"), document.getElementById("stopButtonID"), document.getElementById("pauseButtonID")]
+var modalBackground = document.getElementById("modalBackgroundID");
+var modal = document.getElementById("aboutModalID");
+
 // Two <span> elements which display the timer state to the user
 var countdownLabel = document.getElementById("pomodoroCountdownLabelID");
 var countdownDisplay = document.getElementById("pomodoroCountdownID");
@@ -110,4 +115,43 @@ function pausePomodoro(pauseButton) {
 
     // Clear the 1 second interval
     clearInterval(interval);
+}
+
+window.onclick = function(event) {
+    if (event.target.classList.contains("modal-background-div")) {
+        if (modal.style.display == "block") {
+            closeModal();
+        }
+    }
+}
+
+function openModal() {
+    modalBackground.style.display = "block";
+
+    for (var button of buttons) {
+        button.tabIndex = "-1";
+    }
+
+    modal.style.display = "block";
+    modal.style.animation = "slideDown 0.2s forwards";
+
+    modal.children[0].focus();
+}
+
+function closeModal() {
+
+    modal.style.animation = "slideUp 0.5s forwards";
+
+    modalBackground.style.display = "none";
+
+
+    for (var button of buttons) {
+        button.tabIndex = "0";
+    }
+
+    buttons[0].focus();
+    
+    setTimeout(function() {
+        modal.style.display = "none";
+    }, 250)
 }

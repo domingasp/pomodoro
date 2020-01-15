@@ -18,17 +18,26 @@
             <div class="strap-bar-div">
                 <img class="strap-bar-img"src="./assets/pomodoro.png" alt="Drawing of a tomato">
                 <span class="strap-bar-span">Pomodoro</span>
-                <button class="strap-bar-btn"><i class="fas fa-info-circle strap-bar-btn__icon"></i>About</button>
+                <button class="strap-bar-btn" onclick="openModal()" id="aboutButtonID"><i class="fas fa-info-circle strap-bar-btn__icon"></i>About</button>
             </div>
 
             <div>
                 <div class="controls-container">
-                    <button class="default-btn start-btn" onclick="startPomodoro(this)"><i class="fas fa-play strap-bar-btn__icon"></i>Start</button>
-                    <button class="default-btn stop-btn" onclick="stopPomodoro(this)" disabled><i class="fas fa-stop strap-bar-btn__icon"></i>Stop</button>
-                    <button class="default-btn pause-btn" onclick="pausePomodoro(this)" disabled><i class="fas fa-pause strap-bar-btn__icon"></i>Pause</button>
+                    <button class="default-btn start-btn" onclick="startPomodoro(this)" id="startButtonID"><i class="fas fa-play strap-bar-btn__icon"></i>Start</button>
+                    <button class="default-btn stop-btn" onclick="stopPomodoro(this)" disabled id="stopButtonID"><i class="fas fa-stop strap-bar-btn__icon"></i>Stop</button>
+                    <button class="default-btn pause-btn" onclick="pausePomodoro(this)" disabled id="pauseButtonID"><i class="fas fa-pause strap-bar-btn__icon"></i>Pause</button>
                 </div>
                 <span class="pomodoro-number-span" id="pomodoroCountdownLabelID">Pomodoro 1:</span>
                 <span class="pomodoro-timer-span" id="pomodoroCountdownID">25:00</span>
+            </div>
+
+            <div class="modal-background-div" id="modalBackgroundID"></div>
+
+            <div class="modal-div" id="aboutModalID">
+                <button class="modal-close-btn" onclick="closeModal()" tabindex="0">X</button>
+                <img src="./assets/pomodoro.png" class="modal-img"  alt="Illustration of a tomato">
+                <p class="modal-title">Pomodoro Timer</p>
+                <p class="modal-p">Timer based on the Pomodoro Technique. This concept is basic and works in the following way. Each 'Pomodoro' is 25 minutes in which work is done, each 'Pomodoro' is followed by a 5 minute rest. Once 4 'Pomodoros' have been reached the rest period is 20 minutes before the process restarts again.</p>
             </div>
         </div>
 
